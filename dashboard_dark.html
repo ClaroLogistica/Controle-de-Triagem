@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard Profissional - Tema Escuro</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+body { background-color:#1a1d21; color:white; }
+.sidebar { width:240px; height:100vh; position:fixed; left:0; top:0; background:#111; padding:20px; }
+.sidebar a { color:#ccc; display:block; padding:10px; text-decoration:none; margin-bottom:5px; }
+.main { margin-left:260px; padding:20px; }
+.card { background:#2a2e33; border:none; color:white; }
+.table { color:white; }
+</style>
+</head>
+<body>
+<div class="sidebar">
+<h3>📊 Dashboard</h3>
+<a href="#kpis">KPIs</a>
+<a href="#graficos">Gráficos</a>
+<a href="#tabela">Tabela</a>
+<a href="#upload">Upload Excel</a>
+</div>
+<div class="main">
+<h1>Dashboard de Produção - Tema Escuro</h1>
+<section id="kpis">
+<div class="row">
+<div class="col-md-4"><div class="card p-3"><h4>Total Itens</h4><h2 id="kpiTotal">0</h2></div></div>
+<div class="col-md-4"><div class="card p-3"><h4>Modelos Únicos</h4><h2 id="kpiModelos">0</h2></div></div>
+<div class="col-md-4"><div class="card p-3"><h4>Laboratórios</h4><h2 id="kpiLabs">0</h2></div></div>
+</div>
+</section>
+<section id="graficos" class="mt-4">
+<div class="row">
+<div class="col-md-6"><div class="card p-3"><canvas id="chart1"></canvas></div></div>
+<div class="col-md-6"><div class="card p-3"><canvas id="chart2"></canvas></div></div>
+</div>
+</section>
+<section id="upload" class="mt-4">
+<div class="card p-4"><h4>Upload Excel</h4><input type="file" id="inputExcel" class="form-control"></div>
+</section>
+<section id="tabela" class="mt-4">
+<div class="card p-4"><table id="tableData" class="table table-dark table-striped"><thead id="thead"></thead><tbody id="tbody"></tbody></table></div>
+</section>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+</body></html>
