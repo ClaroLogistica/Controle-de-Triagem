@@ -1,0 +1,15 @@
+
+<!DOCTYPE html><html lang='pt-br'><head><meta charset='UTF-8'><title>Claro Login ULTRA</title>
+<style>body{background:#111;color:#fff;font-family:Arial;display:flex;justify-content:center;align-items:center;height:100vh;} .box{padding:30px;background:#222;border-radius:10px;text-align:center;} input,button{width:100%;padding:10px;margin-top:10px;border-radius:6px;border:none;} button{background:#e50000;color:white;cursor:pointer;}</style>
+</head><body>
+<div class='box'>
+<h2>Claro ULTRA</h2>
+<input id='login' placeholder='Usuário'>
+<input id='senha' type='password' placeholder='Senha'>
+<button onclick="autenticar()">Entrar</button>
+<p id='erro' style='color:red;display:none'>Credenciais inválidas</p>
+</div>
+<script>
+function autenticar(){let u=login.value.trim(),s=senha.value.trim(); if(u==='claro'&&s==='sucesso'){location='dashboard_ultra_fix.html';} else {erro.style.display='block';}}
+</script>
+</body></html>
